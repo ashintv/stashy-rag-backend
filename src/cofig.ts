@@ -16,8 +16,8 @@ export const llm = new ChatGroq({
 });
 
 export const textSplitter = new RecursiveCharacterTextSplitter({
-    chunkSize: 2000,
-    chunkOverlap: 300,
+    chunkSize: 1000,
+    chunkOverlap: 100,
 });
 
 export const embeddings = new HuggingFaceInferenceEmbeddings({
