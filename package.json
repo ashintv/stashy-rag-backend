@@ -1,0 +1,25 @@
+{
+  "name": "rag",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "tsc -b &&node dist/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@huggingface/inference": "^4.0.6",
+    "@langchain/community": "^0.3.47",
+    "@langchain/core": "^0.3.61",
+    "@langchain/groq": "^0.2.3",
+    "@langchain/qdrant": "^0.1.2",
+    "@types/express": "^5.0.3",
+    "dotenv": "^16.6.0",
+    "express": "^5.1.0",
+    "youtubei.js": "^14.0.0"
+  }
+}
