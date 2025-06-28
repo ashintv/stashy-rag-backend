@@ -2,7 +2,6 @@ import { NextFunction, Request, Response } from "express";
 import jwt from 'jsonwebtoken'
 
 export async function AuthMiddleware(req: Request, res: Response, next: NextFunction) {
-
         const token = req.headers["authorization"]
         const key = process.env.JWT_KEY
         if (!token) {
@@ -23,7 +22,7 @@ export async function AuthMiddleware(req: Request, res: Response, next: NextFunc
                         })
                 }
                 //@ts-ignore
-                req.userId = decoded.id
+                req.userID = decoded.id
                 next()
 
         } catch (e) {
