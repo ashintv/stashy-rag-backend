@@ -4,7 +4,7 @@ import { llm, vectorStore } from "../cofig";
 
 export const queryRouter = Router();
 queryRouter.use(express.json());
-queryRouter.get("/", async (req, res) => {
+queryRouter.post("/", async (req, res) => {
     const similaritySearchResults = await vectorStore.similaritySearch(
         req.body.query,
         6
